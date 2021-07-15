@@ -21,6 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('list', [MembersController::class, "dbOperations"]);
+Route::view('email', 'welcome');
 Route::get('checkout', [CheckoutController::class, "checkout"]);
 Route::post('checkout', [CheckoutController::class, "afterPayment"])->name('checkout.credit-card');
 // Route::get('list', [MemberController::class, 'show']);
